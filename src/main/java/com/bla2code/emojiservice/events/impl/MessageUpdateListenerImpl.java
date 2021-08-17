@@ -3,7 +3,6 @@ package com.bla2code.emojiservice.events.impl;
 import com.bla2code.emojiservice.events.EventListener;
 import com.bla2code.emojiservice.service.MessageService;
 import discord4j.core.event.domain.message.MessageUpdateEvent;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -26,6 +25,6 @@ public class MessageUpdateListenerImpl implements EventListener<MessageUpdateEve
         return Mono.just(event)
                 .filter(MessageUpdateEvent::isContentChanged)
                 .flatMap(MessageUpdateEvent::getMessage)
-                .flatMap(messageService::processCommand);
+                .flatMap(messageService::checkCommand);
     }
 }

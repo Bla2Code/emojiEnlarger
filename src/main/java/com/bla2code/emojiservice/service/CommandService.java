@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 
 @Component
-public interface MessageService {
-    Mono<Void> checkCommand(Message eventMessage);
+public interface CommandService {
+    Mono<Message> processCommand(Message eventMessage);
 }
