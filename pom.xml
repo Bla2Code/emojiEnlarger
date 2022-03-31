@@ -12,7 +12,7 @@
 	<artifactId>emoji-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>emoji-service</name>
-	<description>Chatbot for Discord receives emoji as input and returns an enlarged sticker (picture)</description>
+	<description>Chat-bot for Discord receives emoji as input and returns an enlarged sticker (picture)</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -30,7 +30,13 @@
 		<dependency>
 			<groupId>com.discord4j</groupId>
 			<artifactId>discord4j-core</artifactId>
-			<version>3.1.5</version>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+<!--			<version>1.2.3</version>-->
 		</dependency>
 
 		<dependency>
